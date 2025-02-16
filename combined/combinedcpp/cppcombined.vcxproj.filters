@@ -24,17 +24,17 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="KeyboardEvents.h">
+    <ClInclude Include="cppcombined.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="KeyboardEvents.cpp">
+    <ClCompile Include="cppcombined.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="KeyboardEvents.rc">
+    <ResourceCompile Include="cppcombined.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -42,15 +42,21 @@
     <Image Include="small.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="KeyboardEvents.ico">
+    <Image Include="cppcombined.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="icon_heart.ico">
+    <Image Include="icon.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="cursor_emoji.cur">
+    <None Include="cur1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cur2.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cur3.cur">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

@@ -1,8 +1,8 @@
-// KeyboardEvents.cpp : Defines the entry point for the application.
+// cppcombined.cpp : Defines the entry point for the application.
 //
 
 #include "framework.h"
-#include "KeyboardEvents.h"
+#include "cppcombined.h"
 
 #define MAX_LOADSTRING 100
 
@@ -29,7 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // Initialize global strings
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-    LoadStringW(hInstance, IDC_KEYBOARDEVENTS, szWindowClass, MAX_LOADSTRING);
+    LoadStringW(hInstance, IDC_CPPCOMBINED, szWindowClass, MAX_LOADSTRING);
     MyRegisterClass(hInstance);
 
     // Perform application initialization:
@@ -38,7 +38,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }
 
-    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_KEYBOARDEVENTS));
+    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_CPPCOMBINED));
 
     MSG msg;
 
@@ -74,9 +74,9 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.cbWndExtra     = 0;
     wcex.hInstance      = hInstance;
     wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON1));
-    wcex.hCursor        = LoadCursor(hInstance, MAKEINTRESOURCE(IDC_CURSOR1));
+    wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
-    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_KEYBOARDEVENTS);
+    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_CPPCOMBINED);
     wcex.lpszClassName  = szWindowClass;
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_ICON1));
 
@@ -111,45 +111,53 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    return TRUE;
 }
 
-//
-//  FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)
-//
-//  PURPOSE: Processes messages for the main window.
-//
-//  WM_COMMAND  - process the application menu
-//  WM_PAINT    - Paint the main window
-//  WM_DESTROY  - post a quit message and return
-//
-//
+HCURSOR cursorType1;
+HCURSOR cursorType2;
+HCURSOR cursorType3;
+HINSTANCE hInstance;
+BOOL rectNum = 0;
+
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+    TCHAR buf[100] = TEXT("");
+
     switch (message)
     {
-    case WM_KEYDOWN:
-        switch (wParam)
+    case WM_CREATE:
+        hInstance = GetModuleHandle(0);
+        cursorType1 = LoadCursor(hInstance, MAKEINTRESOURCE(IDC_CURSOR1));
+        cursorType2 = LoadCursor(hInstance, MAKEINTRESOURCE(IDC_CURSOR2));
+        cursorType3 = LoadCursor(hInstance, MAKEINTRESOURCE(IDC_CURSOR3));
+        break;
+    case WM_MOUSEMOVE:
+    {
+        RECT rect;
+        GetClientRect(hWnd, &rect);
+        BOOL mouseX = LOWORD(lParam);
+        
+        if (mouseX < rect.right / 5)
         {
-            RECT rect;
-
-        case VK_RETURN:
-            MoveWindow(hWnd, 0, 0, 300, 300, true);
-            break;
-        case VK_UP:
-            GetWindowRect(hWnd, &rect);
-            SetWindowPos(hWnd, nullptr, rect.left, rect.top - 50, 0, 0, SWP_NOSIZE);
-            break;
-        case VK_RIGHT:
-            GetWindowRect(hWnd, &rect);
-            SetWindowPos(hWnd, nullptr, rect.left + 50, rect.top, 0, 0, SWP_NOSIZE);
-            break;
-        case VK_DOWN:
-            GetWindowRect(hWnd, &rect);
-            SetWindowPos(hWnd, nullptr, rect.left, rect.top + 50, 0, 0, SWP_NOSIZE);
-            break;
-        case VK_LEFT:
-            GetWindowRect(hWnd, &rect);
-            SetWindowPos(hWnd, nullptr, rect.left - 50, rect.top, 0, 0, SWP_NOSIZE);
-            break;
+            SetCursor(cursorType1);
+            rectNum = 1;
         }
+        else if (mouseX >= rect.right / 5 && mouseX <= (rect.right / 5) * 4)
+        {
+            SetCursor(cursorType2);
+            rectNum = 2;
+        }
+        else
+        {
+            SetCursor(cursorType3);
+            rectNum = 3;
+        }
+    }
+    break;
+    case WM_LBUTTONDOWN:
+    {
+        wsprintf(buf, TEXT("Курсор знаходиться в %d прямокутнику"), rectNum);
+        MessageBox(hWnd, buf, TEXT("Координати"), MB_OK | MB_ICONINFORMATION);
+    }
+    break;
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);
