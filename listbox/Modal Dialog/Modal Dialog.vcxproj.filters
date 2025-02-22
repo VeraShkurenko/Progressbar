@@ -45,11 +45,5 @@
     <Image Include="Modal Dialog.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="O.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="X.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
 </Project>

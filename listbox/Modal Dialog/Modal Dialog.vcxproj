@@ -140,9 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Modal Dialog.ico" />
-    <Image Include="O.bmp" />
     <Image Include="small.ico" />
-    <Image Include="X.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
