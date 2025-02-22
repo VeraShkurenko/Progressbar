@@ -24,17 +24,17 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Modal Dialog.h">
+    <ClInclude Include="сpp-input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Modal Dialog.cpp">
+    <ClCompile Include="сpp-input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Modal Dialog.rc">
+    <ResourceCompile Include="сpp-input.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -42,7 +42,7 @@
     <Image Include="small.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Modal Dialog.ico">
+    <Image Include="сpp-input.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
