@@ -24,17 +24,17 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="сpp-input.h">
+    <ClInclude Include="WindowsProject2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="сpp-input.cpp">
+    <ClCompile Include="WindowsProject2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="сpp-input.rc">
+    <ResourceCompile Include="WindowsProject2.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -42,7 +42,7 @@
     <Image Include="small.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="сpp-input.ico">
+    <Image Include="WindowsProject2.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
