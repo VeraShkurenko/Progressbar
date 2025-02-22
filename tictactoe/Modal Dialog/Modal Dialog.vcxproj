@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{742ccd21-0119-46c7-9d93-287e6e2d5413}</ProjectGuid>
-    <RootNamespace>cppcombined</RootNamespace>
+    <ProjectGuid>{becba607-921d-4ae2-9882-79edc438e699}</ProjectGuid>
+    <RootNamespace>ModalDialog</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,26 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="cppcombined.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Modal Dialog.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cppcombined.cpp" />
+    <ClCompile Include="Modal Dialog.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="cppcombined.rc" />
+    <ResourceCompile Include="Modal Dialog.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="cppcombined.ico" />
-    <Image Include="icon.ico" />
+    <Image Include="Modal Dialog.ico" />
+    <Image Include="O.bmp" />
     <Image Include="small.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cur1.cur" />
-    <None Include="cur2.cur" />
-    <None Include="cur3.cur" />
+    <Image Include="X.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

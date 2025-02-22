@@ -24,17 +24,17 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cppcombined.h">
+    <ClInclude Include="Modal Dialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cppcombined.cpp">
+    <ClCompile Include="Modal Dialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="cppcombined.rc">
+    <ResourceCompile Include="Modal Dialog.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -42,22 +42,14 @@
     <Image Include="small.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="cppcombined.ico">
+    <Image Include="Modal Dialog.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="icon.ico">
+    <Image Include="O.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cur1.cur">
+    <Image Include="X.bmp">
       <Filter>Resource Files</Filter>
-    </None>
-    <None Include="cur2.cur">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="cur3.cur">
-      <Filter>Resource Files</Filter>
-    </None>
+    </Image>
   </ItemGroup>
 </Project>
