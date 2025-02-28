@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ca3cffa4-82f5-435d-afbf-82aca7ff38b4}</ProjectGuid>
-    <RootNamespace>WindowsProject2</RootNamespace>
+    <ProjectGuid>{2ee2eeeb-85ea-4c65-92a8-48d3fb7cbbd2}</ProjectGuid>
+    <RootNamespace>cppthreads</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,20 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="cppthreads.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="WindowsProject2.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WindowsProject2.cpp" />
+    <ClCompile Include="cppthreads.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="WindowsProject2.rc" />
+    <ResourceCompile Include="cppthreads.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="cppthreads.ico" />
     <Image Include="small.ico" />
-    <Image Include="WindowsProject2.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
