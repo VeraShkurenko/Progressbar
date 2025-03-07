@@ -24,17 +24,17 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cppthreads.h">
+    <ClInclude Include="cppprogressbar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cppthreads.cpp">
+    <ClCompile Include="cppprogressbar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="cppthreads.rc">
+    <ResourceCompile Include="cppprogressbar.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -42,7 +42,7 @@
     <Image Include="small.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="cppthreads.ico">
+    <Image Include="cppprogressbar.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

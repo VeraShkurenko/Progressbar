@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2ee2eeeb-85ea-4c65-92a8-48d3fb7cbbd2}</ProjectGuid>
-    <RootNamespace>cppthreads</RootNamespace>
+    <ProjectGuid>{a363a68f-46d5-44bc-bf4a-6988de92c65e}</ProjectGuid>
+    <RootNamespace>cppprogressbar</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,19 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="cppthreads.h" />
+    <ClInclude Include="cppprogressbar.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cppthreads.cpp" />
+    <ClCompile Include="cppprogressbar.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="cppthreads.rc" />
+    <ResourceCompile Include="cppprogressbar.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="cppthreads.ico" />
+    <Image Include="cppprogressbar.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
